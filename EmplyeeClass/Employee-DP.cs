@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace EmplyeeClass
 {
-    internal class Employee
+    internal class Employee_DP
     {
         int id;
         string name;
         string address;
-        public void GetDetails()
+        public virtual void GetDetails()
         {
             Console.WriteLine("enter id");
             id = int.Parse(Console.ReadLine());
@@ -21,14 +21,14 @@ namespace EmplyeeClass
             address = Console.ReadLine();
         }
 
-        public void DisplayDetails()
+        public virtual void DisplayDetails()
         {
             Console.WriteLine($"Id is {id}");
             Console.WriteLine($"Name is {name}");
             Console.WriteLine($"Address is {address}");
         }
-        public Employee() { }
-        public Employee(int id, string name, string address)
+        public Employee_DP() { }
+        public Employee_DP(int id, string name, string address)
         {
             this.id = id;
             this.name = name;

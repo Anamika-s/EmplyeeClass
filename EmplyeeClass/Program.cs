@@ -17,6 +17,18 @@
             //fullTimeEmployee.GetFullTimeEmployeeDetails();
             fullTimeEmployee.DisplayDetails();
             //fullTimeEmployee.DisplayFullTimeEmployeeDetails();
+
+            PartTimeEmployee partTimeEmployee1 =
+                 new PartTimeEmployee(90, "ajay", "New Delhi",
+                 "90 Days", 9000f);
+
+            partTimeEmployee1.DisplayDetails();
+
+            FullTimeEmployee fullTimeEmployee1 = new FullTimeEmployee
+                (id: 102, name: "deepak", address: "delhi",
+                dept: "hr", manager: "deepak", salary: 9090f);
+            fullTimeEmployee1.DisplayDetails ();
+
         }
     }
 }

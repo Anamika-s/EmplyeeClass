@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace EmplyeeClass
 {
-    internal class PartTimeEmployee : Employee
+    internal class PartTimeEmployee_DP : Employee_DP
     {
         string contractDuration;
         float chargesPerDay;
         //public void GetPartTimeEmployeeDetails()
-        public void GetDetails()
-        {
+        public override void GetDetails()
+        { 
             base.GetDetails();
             Console.WriteLine("enter contractDuration");
             contractDuration = Console.ReadLine();
@@ -20,15 +20,15 @@ namespace EmplyeeClass
             chargesPerDay= float.Parse(Console.ReadLine());
         }
         //public void DisplayPartTimeEmployeeDetails()
-        public void DisplayDetails()
+        public override void DisplayDetails()
         {
             base.DisplayDetails();
             Console.WriteLine($"contractDuration is {contractDuration}");
             Console.WriteLine($"chargesPerDay are {chargesPerDay}");
         }
 
-        public PartTimeEmployee()  : base() { }
-        public PartTimeEmployee(int id, string name, 
+        public PartTimeEmployee_DP()  : base() { }
+        public PartTimeEmployee_DP(int id, string name, 
             string address, string contractDuration,  float chargesPerDay)
             : base (id, name , address)
         {

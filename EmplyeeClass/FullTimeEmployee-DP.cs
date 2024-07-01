@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace EmplyeeClass
 {
-    internal class FullTimeEmployee : Employee
+    internal class FullTimeEmployee_DP : Employee_DP
     {
         string dept;
         string manager;
         float salary;
-            public void GetDetails()
+            public override void GetDetails()
         //public void GetFullTimeEmployeeDetails()
         {
             base.GetDetails();
@@ -24,15 +24,15 @@ namespace EmplyeeClass
             salary = float.Parse(Console.ReadLine());
         }
         //public void DisplayFullTimeEmployeeDetails()
-        public void DisplayDetails()
+        public  override void DisplayDetails()
         {
             base.DisplayDetails();
             Console.WriteLine($"dept is {dept}");
             Console.WriteLine($"manager is {manager}");
             Console.WriteLine($"salary is {salary}");
         }
-        public FullTimeEmployee() : base() { }
-        public FullTimeEmployee(int id, string name, string address,
+        public FullTimeEmployee_DP() : base() { }
+        public FullTimeEmployee_DP(int id, string name, string address,
             string manager, string dept, float salary)
             : base (id, name, address)
         {
